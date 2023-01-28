@@ -15,6 +15,12 @@ Here are the rules of this challenge.. you must:
 4.  Make the layout responsive with at least one breakpoint (your choice as to how it looks on a smaller screen width).
 5.  Once the user is finished making their selections, they can click on a submit button that displays a results modal screen. A user can dismiss the modal by clicking on the close button (follow the wireframe below).
 
+## Run using GITPOD:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Amishmaqbool/MovieAwards-Task.git)
+
+
+
 ## Requirements:
 
 1.  All navigation should happen in the same page
