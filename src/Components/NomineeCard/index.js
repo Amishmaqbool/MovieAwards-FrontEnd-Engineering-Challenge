@@ -14,7 +14,7 @@ export default function NomineeCard({ nominees, catagoryId, buttonText, setSelec
     };
 
     const handleNomineeHover = (nomineeId) => {
-        asetHoveredNomineeId(nomineeId);
+        setHoveredNomineeId(nomineeId);
     }
 
 

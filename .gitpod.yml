@@ -6,10 +6,12 @@
 
 tasks:
   - init: yarn install && yarn run build
-    command: yarn run start
+    command: yarn backend && yarn run start 
 ports:
   - port: 3000
     onOpen: open-browser
     visibility: public
-  
+  - port: 8080
+    onOpen: open-browser
+    visibility: public
  
