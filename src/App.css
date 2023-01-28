@@ -18,12 +18,15 @@
 }
 
 .ballot-title {
-  display: inline-block;
-  max-width: 20ch;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 250px;
   white-space: nowrap;
-  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
 }
 
 .Ballot-component {
@@ -39,12 +42,11 @@
 
 .submit-btn {
   background: #009B86;
-  border: 1px solid #009B86;
-  border-radius: 10px;
+  border: 1px solid #cccccc;
   color: white;
   cursor: pointer;
-  padding: 22px 30px;
-  font-size: 26px;
+  padding: 16px 30px;
+  font-size: 18px;
 
 }
 

@@ -20,7 +20,6 @@
     transform: scale(1.03);
     transition: transform 0.8s ease;
     color: black;
-
 }
 
 .child-parent-ballot {
@@ -51,22 +50,15 @@
 
 .ballot-title {
     display: inline-block;
-    max-width: 20ch;
+    max-width: 23ch;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.ballot-title::after {
-    content: "...";
-}
 
-.ballot-title:hover {
-    max-width: none;
-    text-overflow: initial;
-    overflow: visible;
-    white-space: normal;
-}
+
+
 
 .ballot-btn-parent {
     display: flex;
@@ -75,12 +67,47 @@
 
 }
 
+.ballot-parent-container.active {
+    background-color: #cccccc;
+    color: black;
+}
+
 .ballot-btn {
     padding: 12px 30px;
     background-color: #009B86;
     border: 1px solid #cccccc;
     color: white;
     cursor: pointer;
+}
+
+.ballot-btn:hover {
+    background-color: #0D2436;
+}
+
+.active {
+    background-color: #ccc;
+    transform: scale(1.03);
+    transition: transform 0.8s ease;
+}
+
+.active .ballot-btn {
+    padding: 12px 30px;
+    background-color: #0D2436;
+    border: 1px solid #cccccc;
+    color: white;
+    cursor: pointer;
+}
+
+.ballot-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ballot-title:hover {
+    overflow: visible;
+    white-space: normal;
+
 }
 
 @media screen and (max-width:1080px) {

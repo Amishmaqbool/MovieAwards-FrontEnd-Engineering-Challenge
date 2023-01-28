@@ -1,6 +1,5 @@
 import "./App.css";
-import Ballot from "../src/Pages/Ballotpage";
-import ModalButton from "./Components/Modal/ModalButton";
+import BallotPage from "./Pages/BallorPage";
 
 function App() {
   // Feel free to remove the contents of the header tag to make more room for your code
@@ -11,10 +10,7 @@ function App() {
           <h1 className="App-heading">Movie Awards 2021</h1>
         </div>
         <div className="Ballot-component">
-          <Ballot  />
-        </div>
-        <div className="submit-btn-parent">
-          <ModalButton />
+          <BallotPage />
         </div>
       </div>
     </div>
