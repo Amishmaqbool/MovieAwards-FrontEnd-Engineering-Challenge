@@ -1,24 +1,29 @@
 import { useState, useEffect } from "react"
+import Ellipsis from 'react-lines-ellipsis';
 import './index.css'
-export default function NomineeCard({ nominees, catagoryId, button }) {
-    const [selectedNominee, setSelectedNominee] = useState([]);
-    const [tempSelectedNominee, setTempSelectedNominee] = useState({ title: '', photoUrL: '', id: '' });
-    let Selectednominees = [];
+export default function NomineeCard({ nominees, catagoryId, buttonText }) {
+    const [selectedNominee, setSelectedNominee] = useState({
+        "best-picture": null,
+        "best-director": null,
+        "best-actor": null,
+        "best-actress": null,
+        "best-supporting-actor": null,
+        "best-supporting-actress": null,
+        "best-visual-effects": null
+    });
+
     const handleSelection = (nominee, catagoryId) => {
-        console.log("ggg", Selectednominees.length)
-        if (selectedNominee) {
-            let activeNominee = {...nominee,...catagoryId }
-            console.log(activeNominee,"active")
-            setSelectedNominee([ ...selectedNominee, ...activeNominee ])
-            console.log(selectedNominee, "selectedNominee")
-        }
+        console.log(nominee, "nominee")
+        setSelectedNominee((prevSelectedNominee) => ({
+            ...prevSelectedNominee,
+            [catagoryId]: nominee.id,
+        }));
+
     };
-    
+
     useEffect(() => {
         console.log(selectedNominee, "selected nominiee")
-    },
-        [selectedNominee]);
-        
+    }, [selectedNominee])
     return (
         <>
             <div className='parent-div'>
@@ -31,21 +36,19 @@ export default function NomineeCard({ nominees, catagoryId, button }) {
                                     {<img className='ballot-image' src={nominee.photoUrL} alt={nominee.title} />}
                                 </div>
                                 <div className='ballot-title-parent'>
-                                    <span className="ballot-title">
-                                            <span className='tooltiptext'>{nominee.title}</span>
-                                    </span>
+                                    <Ellipsis className="ballot-title" lines={2} text={nominee.title} suffix="Read more" />
                                 </div>
                                 <div className='ballot-btn-parent'>
                                     <button
                                         className='ballot-btn'
                                         onClick={() => handleSelection(nominee, catagoryId)}
                                     >
-                                        {button}
+                                        {buttonText}
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    )git 
+                    )
                 })}
             </div>
         </>

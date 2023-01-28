@@ -71,13 +71,14 @@
 .ballot-btn-parent {
     display: flex;
     justify-content: center;
+    padding-top: 5px;
+
 }
 
 .ballot-btn {
     padding: 12px 30px;
     background-color: #009B86;
     border: 1px solid #cccccc;
-    border-radius: 10px;
     color: white;
     cursor: pointer;
 }
@@ -85,22 +86,24 @@
 @media screen and (max-width:1080px) {
     .parent-div {
         grid-template-columns: repeat(3, 1fr);
-      
-    }    
+
+    }
 }
+
 @media screen and (max-width:790px) {
     .parent-div {
         grid-template-columns: repeat(2, auto);
-    }    
+    }
 }
+
 @media screen and (max-width:560px) {
     .parent-div {
         grid-template-columns: repeat(1, auto);
         padding: 0px 30px;
-    } 
-    
-.ballot-image {
-    width: 250px;
-    height: 250px;
-}   
+    }
+
+    .ballot-image {
+        width: 250px;
+        height: 250px;
+    }
 }

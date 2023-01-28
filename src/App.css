@@ -17,6 +17,14 @@
   color: white;
 }
 
+.ballot-title {
+  display: inline-block;
+  max-width: 20ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+}
 
 .Ballot-component {
   margin-top: 50px;

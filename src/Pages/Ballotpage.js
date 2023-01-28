@@ -6,8 +6,8 @@ import NomineeCard from '../Components/NomineeCard/NomineeCard.js'
 const Ballot = ({ buttonText }) => {
     const [ballotData, setBallotData] = useState([])
     useEffect(() => {
-        api?.getBallotData().then((response) => {
-            setBallotData(response.items)
+        api?.getBallotData().then(({items}) => {
+            setBallotData(items)
         })
     }, [])
     return (
@@ -17,7 +17,7 @@ const Ballot = ({ buttonText }) => {
                     <>
                         <div className=''>
                             <Category title={catagory.title} />
-                            <NomineeCard nominees={catagory.items} catagoryId={catagory.id} buttonText={"Select"} />
+                            <NomineeCard nominees={catagory.items} catagory={catagory} buttonText={"Select"} />
                         </div>
                     </>
                 )
