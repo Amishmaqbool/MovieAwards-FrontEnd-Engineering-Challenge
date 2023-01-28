@@ -9,7 +9,7 @@ export default function NomineeCard({ nominees, catagoryId, button }) {
         if (selectedNominee) {
             let activeNominee = {...nominee,...catagoryId }
             console.log(activeNominee,"active")
-            setSelectedNominee([ ...selectedNominee, nominee,catagoryId ])
+            setSelectedNominee([ ...selectedNominee, ...activeNominee ])
             console.log(selectedNominee, "selectedNominee")
         }
     };
@@ -45,7 +45,7 @@ export default function NomineeCard({ nominees, catagoryId, button }) {
                                 </div>
                             </div>
                         </div>
-                    )
+                    )git 
                 })}
             </div>
         </>
