@@ -1,31 +1,50 @@
 .App {
+  background-color: #0D2436;
+  height: auto;
+}
+
+.parent-container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.App-heading {
+  font-size: 32px;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
   text-align: center;
-}
-
-.App-logo {
-  height: 15vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #50B074;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 40px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.Ballot-component {
+  margin-top: 50px;
+}
+
+.submit-btn-parent {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  padding-right: 10px;
+}
+
+.submit-btn {
+  background: #009B86;
+  border: 1px solid #009B86;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 22px 30px;
+  font-size: 26px;
+
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

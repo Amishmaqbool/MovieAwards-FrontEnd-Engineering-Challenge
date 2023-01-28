@@ -1,0 +1,106 @@
+.ballot-parent-container {
+    border: 2px solid #cccccc;
+    background-color: #009B86;
+    width: fit-content;
+    padding: 20px 30px;
+    margin-top: 50px;
+    width: 65%;
+
+}
+
+.parent-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.ballot-parent-container:hover {
+    background-color: #CCCCCC;
+    transform: scale(1.03);
+    transition: transform 0.8s ease;
+    color: black;
+
+}
+
+.child-parent-ballot {
+    width: 100%;
+}
+
+.ballot-image-parent {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ballot-image {
+    width: 200px;
+    height: 250px;
+}
+
+.ballot-title-parent {
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+}
+
+.ballot-title {
+    font-size: 15px;
+    color: white;
+}
+
+.ballot-title {
+    display: inline-block;
+    max-width: 20ch;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ballot-title::after {
+    content: "...";
+}
+
+.ballot-title:hover {
+    max-width: none;
+    text-overflow: initial;
+    overflow: visible;
+    white-space: normal;
+}
+
+.ballot-btn-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.ballot-btn {
+    padding: 12px 30px;
+    background-color: #009B86;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1080px) {
+    .parent-div {
+        grid-template-columns: repeat(3, 1fr);
+      
+    }    
+}
+@media screen and (max-width:790px) {
+    .parent-div {
+        grid-template-columns: repeat(2, auto);
+    }    
+}
+@media screen and (max-width:560px) {
+    .parent-div {
+        grid-template-columns: repeat(1, auto);
+        padding: 0px 30px;
+    } 
+    
+.ballot-image {
+    width: 250px;
+    height: 250px;
+}   
+}
